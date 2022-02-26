@@ -1,0 +1,145 @@
+/* outer styles */
+@font-face {
+    font-family: Norsebold;
+    src: url("../assets/Norsebold.otf");
+}
+a{text-decoration: none;color:#fff;}
+a:hover{text-decoration: underline;}
+body{
+    min-height: 100vh;
+    display:flex;
+    background-color:#000;
+    justify-content:center;
+    align-items: center;
+    flex-direction:row;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .container{
+
+        display:flex;
+        justify-content:flex-start;
+        background-color:#fff;
+        min-height: 100vh;
+        max-width:1200px;
+        gap:40px;
+   
+        /*background pane styles*/
+        .background-pane{
+            
+            display:flex;
+            flex:2;
+            flex-direction:column;
+            max-height:100%;
+            justify-content:space-around;
+            background:url("../img/leaves.jpg");
+            background-size:100% 100%;
+            background-repeat:none;
+            
+            /*background pane children*/
+            .top-spacer{
+                flex:1;
+            }
+            .logo-holder{
+                background-color:rgba($color: #000000, $alpha: 0.7);
+                height:100px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+                .odin-logo{
+                    background-image: url(../img/odin-lined.png);
+                    width:75px;
+                    height:100px;
+                    background-size:contain;
+                }
+
+                .odin-text{
+                    color:#fff;
+                    font-family:Norsebold;
+                    font-size:70px
+                }
+            }
+            
+            .spacer{
+                flex:2;
+            }
+            .credits{
+                flex:0 0 20px;
+                color:#fff;
+                font-size:11px;
+                display:flex;
+                justify-content: center;
+            }
+        }
+
+        /*form holder styles */
+        .form-holder{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            background-color:#fff;
+            align-items: flex-start;
+            flex:3;
+            gap:20px;
+            
+            .blurb{
+                font-weight:700;
+                font-size:16px;
+
+                :nth-child(3){
+                    padding-top:50px;
+                }
+            }
+            /*form styles */
+            form{
+            
+                display:flex;
+                gap:50px;
+                text-transform:uppercase;
+                font-size:9px;
+                letter-spacing: 2px;
+                font-weight:500;
+
+                input{
+                    border:1px solid #ccc;
+                    height:30px;
+                    border-radius: 3px;
+                    width:235px;
+                }
+
+                .left-column,.right-column{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    gap:10px;
+                }
+
+                .left-column div,.right-column div{
+                    display:flex;
+                    flex-direction:column;
+                }
+            }    
+            /* end form styles */
+            .login{
+                button{
+                    background-color:#596D48;
+                    outline:none;
+                    border:0px;
+                    color:#fff;
+                    font-size:9px;
+                    font-weight:bold;
+                    padding:7px 30px;
+                    border-radius: 4px;
+
+                }
+                font-size: 11px;
+                font-weight:600px;
+                a{
+                    color:#596D48;
+                }
+
+            }
+        }
+    }
+}
